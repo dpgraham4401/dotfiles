@@ -36,3 +36,4 @@ steam
 tor-browser
 visual-studio-code
 tmux
+httpie

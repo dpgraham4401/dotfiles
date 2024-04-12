@@ -42,6 +42,7 @@ CASE_SENSITIVE="false"
 
 # Plugins
 plugins=(
+	1password
 	mvn
     golang 
 	aws
@@ -67,4 +68,4 @@ if [ -f "$HOME/.alias" ]; then
     source ~/.alias 
 fi
 
-
+eval "$(op completion zsh)"; compdef _op op
