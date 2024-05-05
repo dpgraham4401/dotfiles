@@ -26,6 +26,7 @@ alias vim="$EDITOR"
 alias mkdir="mkdir -pv"
 alias gf="git fetch --all --prune"
 alias venv="python -m venv"
+alias python="python3"
 alias vact="source ./venv/bin/activate"
 alias rm="$(which trash)"
 alias od="onedrive --synchronize"
@@ -40,8 +41,7 @@ alias godev="cd $GOPATH/src/github.com/dpgraham4401"
 alias rustbook="firefox /home/dg/OneDrive/Documents/Books/theRustBookHtml/index.html"
 alias waybook="qutebrowser https://wayland-book.com --target window"
 alias speed="speedtest-cli --simple"
-alias setBrave="xdg-settings set default-web-browser com.brave.Browser.desktop"
-alias setGoogle="xdg-settings set default-web-browser com.google.Chrome.desktop"
+alias setGoogle="xdg-settings set default-web-browser google-Chrome.desktop"
 alias setFirefox="xdg-settings set default-web-browser firefox.desktop"
 # Kitty terminal 
 if [ "$TERM" = "xterm-kitty" ]; then
@@ -62,3 +62,8 @@ if [[ ! "$SSH_AUTH_SOCK" ]]; then
     source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
 fi
 export GPG_TTY=$(tty)
+
+# Node Version manager
+export NVM_DIR="$HOME/.config//nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
