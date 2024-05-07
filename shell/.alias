@@ -13,15 +13,12 @@ export PATH="${PATH}:${HOME}/.local/share/JetBrains/Toolbox/bin"
 export GOROOT=`go env GOROOT`
 export EDITOR='/usr/bin/nvim'
 export VISUAL='/usr/bin/nvim'
-# export EDITOR='~/.local/bin/lvim'
-# export VISUAL='~/.local/bin/lvim'
 export FZF_DEFAULT_COMMAND='find . \( -name node_modules -o -name .git \) -prune -o -print'
 export KUBECONFIG="$HOME/.kube/config"
 export GITHUB_USER="dpgraham4401"
 export GPG_TTY=$(tty)
 export NODE_PATH=$HOME/.npm/lib/node_modules
 # aliases
-alias fuck="sudo !!"
 alias mv="mv -i"
 alias v="$EDITOR"
 alias vim="$EDITOR"
@@ -30,7 +27,6 @@ alias gf="git fetch --all --prune"
 alias venv="python -m venv"
 alias vact="source ./venv/bin/activate"
 alias rm="$(which trash)"
-alias od="onedrive --synchronize"
 alias untar="tar -zxvf"
 alias ping="ping -c 5"
 alias c="clear"
@@ -38,9 +34,8 @@ alias py="python"
 alias config="cd /home/dg/.dotfiles"
 alias dev="cd /home/dg/Projects"
 alias kube="kubectl"
-alias godev="cd $GOPATH/src/github.com/dpgraham4401"
+alias k="kubectl"
 alias rustbook="firefox /home/dg/OneDrive/Documents/Books/theRustBookHtml/index.html"
-alias waybook="qutebrowser https://wayland-book.com --target window"
 alias speed="speedtest-cli --simple"
 alias setBrave="xdg-settings set default-web-browser com.brave.Browser.desktop"
 alias setGoogle="xdg-settings set default-web-browser com.google.Chrome.desktop"
@@ -64,3 +59,8 @@ if [[ ! "$SSH_AUTH_SOCK" ]]; then
     source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
 fi
 export GPG_TTY=$(tty)
+
+# Node Version Manager
+export NVM_DIR="$HOME/.config//nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

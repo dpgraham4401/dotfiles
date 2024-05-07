@@ -1,5 +1,9 @@
 # .zshrc
-if [ "$TMUX" = "" ]; then tmux; fi
+if [[ "$TERMINAL_EMULATOR" =~ [Jj][Ee][Tt][Bb][Rr][Aa][Ii][Nn][Ss] ]]; then
+	:
+else [ "$TMUX" = "" ]; 
+	tmux; 
+fi
 autoload -U colors && colors
 alias zshrc="source ~/.zshrc"
 fpath+=~/.zfunc
