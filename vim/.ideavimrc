@@ -6,7 +6,26 @@ source ~/.vim/vimrc
 " text scroll if you mouse-click near the start or end of the window.
 set scrolloff=5
 
-" Do incremental searching.
+" Plugins
+"<leader>n --> toggle nerdtree
+"| Key     |  Description                                            |
+"| `o`     |  Open files, directories and bookmarks                  |
+"| `go`    |  Open selected file, but leave cursor in the NERDTree   |
+"| `t`     |  Open selected node/bookmark in a new tab               |
+"| `O`     |  Recursively open the selected directory                |
+"| `x`     |  Close the current nodes parent                         |
+"| `X`     |  Recursively close all children of the current node     |
+"| `K`     |  Jump up inside directories at the current tree depth   |
+"| `J`     |  Jump down inside directories at the current tree depth |
+"| `<C-J>` |  Jump down to next sibling of the current directory     |
+"| `<C-K>` |  Jump up to previous sibling of the current directory   |
+"| `m`     |  Display the NERDTree menu                              |
+"| `q`     |  Close the NERDTree window                              |
+"| `A`     |  Zoom (maximize/minimize) the NERDTree window           |
+
+
+
+
 set incsearch
 
 " Don't use Ex mode, use Q for formatting.

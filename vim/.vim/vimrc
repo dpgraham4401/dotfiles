@@ -5,6 +5,7 @@ call plug#begin()
 	Plug 'tpope/vim-surround'
 	Plug 'tmsvg/pear-tree'
 	Plug 'preservim/nerdtree'
+	Plug 'easymotion/vim-easymotion'
 call plug#end()
 
 set tabstop=4
@@ -23,6 +24,7 @@ set termguicolors
 set incsearch
 syntax enable
 filetype plugin indent on
+colorscheme habamax
 
 " Keybindings
 inoremap jk <Esc>
@@ -35,10 +37,26 @@ noremap <Tab> :bprevious<CR>
 map <leader>n :NERDTreeToggle<CR> 
 " save with Control-S
 map <C-s> :w<CR>
-map <leader>s :w<CR>
+" map <leader>s :w<CR>
 " quit with Control-q
 map <C-q> :q<CR>
 map <leader>q :q<CR>
+
+" easy motion
+" <Leader>f{char} to move to {char}
+map  <Leader>f <Plug>(easymotion-bd-f)
+nmap <Leader>f <Plug>(easymotion-overwin-f)
+
+" s{char}{char} to move to {char}{char}
+nmap s <Plug>(easymotion-overwin-f2)
+
+" Move to line
+map <Leader>L <Plug>(easymotion-bd-jk)
+nmap <Leader>L <Plug>(easymotion-overwin-line)
+
+" Move to word
+map  <Leader>w <Plug>(easymotion-bd-w)
+nmap <Leader>w <Plug>(easymotion-overwin-w)
 
 " move around splits with Alt-arrow
 nmap <silent> <A-Up> :wincmd k<CR>
