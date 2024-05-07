@@ -26,7 +26,7 @@
 ### Apperance
 
 	# Wallpaper
-		output * bg $HOME/.local/share/backgrounds/pxfuel.jpg fill
+		output * bg $HOME/.local/share/backgrounds/tree-house.jpg fill
     focus_wrapping no
 
     # Window colors
@@ -112,7 +112,7 @@ exec swayidle -w \
     bindsym $mod+n exec kitty --class=ranger sh -c "source ~/.zshrc & source ranger"
 
 	# spotify-tui
-	bindsym $mod+s exec kitty --class=spotify -e "spt"
+	# bindsym $mod+s exec kitty --class=spotify -e "spt"
 
 ### Moving around:
     # Move your focus around
