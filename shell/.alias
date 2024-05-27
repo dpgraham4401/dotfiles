@@ -39,7 +39,7 @@ alias rustbook="firefox /home/dg/OneDrive/Documents/Books/theRustBookHtml/index.
 alias speed="speedtest-cli --simple"
 alias setBrave="xdg-settings set default-web-browser com.brave.Browser.desktop"
 alias setGoogle="xdg-settings set default-web-browser com.google.Chrome.desktop"
-alias setFirefox="xdg-settings set default-web-browser firefox.desktop"
+alias setFirefox="xdg-settings set default-web-browser org.mozilla.firefox.desktop"
 # Kitty terminal 
 if [ "$TERM" = "xterm-kitty" ]; then
 	alias ssh="kitty +kitten ssh"
@@ -64,3 +64,10 @@ export GPG_TTY=$(tty)
 export NVM_DIR="$HOME/.config//nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# TMUX
+if [[ "$TERMINAL_EMULATOR" =~ [Jj][Ee][Tt][Bb][Rr][Aa][Ii][Nn][Ss] ]]; then
+	:
+elif [[ -z "$TMUX" ]]; then 
+	exec tmux
+fi

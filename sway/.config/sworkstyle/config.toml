@@ -53,6 +53,7 @@ unique = true
 'Spotify' = ''
 '/(?i)Github.*Firefox/' = ' '
 'firefox' = ' '
+'org.mozilla.firefox' = ' '
 'Firefox' = ' '
 'Nightly' = ' '
 'firefoxdeveloperedition' = ''
