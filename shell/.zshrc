@@ -1,5 +1,5 @@
 # .zshrc
-if [ "$TMUX" = "" ]; then tmux; fi
+# if [ "$TMUX" = "" ]; then tmux; fi
 autoload -U colors && colors
 fpath+=~/.zfunc
 HISTFILE=~/.histfile
@@ -45,7 +45,6 @@ plugins=(
 	1password
 	mvn
     golang 
-	aws
     kubectl
 	minikube
     docker
@@ -57,7 +56,6 @@ plugins=(
     dirhistory
     history
     pip
-	helm
 	rust
 	gcloud
 	terraform

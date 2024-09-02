@@ -30,7 +30,12 @@ alias speed="speedtest-cli --simple"
 alias gf="git fetch --all --prune"
 alias uncommit="git reset --soft HEAD~1"
 alias dps="docker ps"
+alias curl="curl --fail"
 # autostart ssh agent
 # if ! pgrep -u "$USER" ssh-agent > /dev/null; then
 #     ssh-agent -t 1h > "$XDG_RUNTIME_DIR/ssh-agent.env"
 # fi
+
+function pip-install-save { 
+    pip install $1 && pip freeze | grep $1 >> requirements.txt
+}

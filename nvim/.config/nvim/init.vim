@@ -38,7 +38,7 @@ syntax enable
 filetype plugin indent on
 
 " Appearance
-colorscheme nord
+" colorscheme nord
 set termguicolors
 
 " key mappings
