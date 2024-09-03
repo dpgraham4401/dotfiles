@@ -40,6 +40,7 @@ alias speed="speedtest-cli --simple"
 alias setBrave="xdg-settings set default-web-browser com.brave.Browser.desktop"
 alias setGoogle="xdg-settings set default-web-browser com.google.Chrome.desktop"
 alias setFirefox="xdg-settings set default-web-browser org.mozilla.firefox.desktop"
+alias curl="curl --fail"
 # Kitty terminal 
 if [ "$TERM" = "xterm-kitty" ]; then
 	alias ssh="kitty +kitten ssh"

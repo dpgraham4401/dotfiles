@@ -50,6 +50,7 @@ unique = true
 'jetbrains-goland' = ' '
 'jetbrains-webstorm' = ' '
 'jetbrains-clion' = ' '
+'jetbrains-idea' = ' '
 'Spotify' = ''
 '/(?i)Github.*Firefox/' = ' '
 'firefox' = ' '
