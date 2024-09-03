@@ -15,6 +15,7 @@ lua << EOF
 	require("bufferline").setup{}
 	require("terminal").setup()
 	require("term_options")
+	require("tree-sitter")
 local key_mapper = require('utils').key_mapper
 -- A custom function that closes the current buffer, checks if it's the last buffer, and if so, closes the window.
 key_mapper('n', '<C-q>', '<cmd>lua require("utils").close_buffer()<CR>')

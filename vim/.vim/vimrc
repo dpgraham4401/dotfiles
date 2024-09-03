@@ -18,13 +18,21 @@ call plug#begin()
 	Plug 'rafi/awesome-vim-colorschemes'
 	" icons for nvim
 	Plug 'kyazdani42/nvim-web-devicons'
-	Plug 'akinsho/bufferline.nvim'
+	" Fuzzy finder
 	Plug 'junegunn/fzf'
+	" Fuzzy finder for vim
 	Plug 'junegunn/fzf.vim' 
-	" Plug 'lewis6991/spellsitter.nvim'
-	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-	Plug 'akinsho/toggleterm.nvim'
+	" GitHUb Copilot - autocompletions on crack
 	Plug 'github/copilot.vim'
+	" Neovim specific plugins
+	if has('nvim')
+		" Add a bufferline to the top of the editor
+		Plug 'akinsho/bufferline.nvim'
+		" Treesitter -- I always forget what the heck this does
+		Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+		" Open up a terminal without leaving vim
+		Plug 'akinsho/toggleterm.nvim'
+	endif
 call plug#end()
 
 " Settings 
@@ -37,11 +45,12 @@ set nowrap
 set relativenumber
 set number
 set mouse=a
-set clipboard=unnamed
+set clipboard=unnamedplus
 set belloff=all
 set hidden
 set rtp+=/opt/homebrew/opt/fz
 set scrolloff=5
+" set spell
 
 " leader key
 let mapleader=" "
@@ -66,7 +75,9 @@ nnoremap ; :
 " Plugin key mappings
 nnoremap <leader>n	:NERDTreeToggle<CR>
 nnoremap <leader>f	:Files<CR>
-nnoremap <Leader>' :ToggleTerm<CR>
+if has('nvim')
+	nnoremap <Leader>' :ToggleTerm<CR>
+endif
 
 " move around splits with Alt-arrow
 nmap <silent> <A-Up> :wincmd k<CR>
