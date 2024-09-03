@@ -2,6 +2,7 @@
 
 local M ={}
 
+-- Key Mapper, a utiliy function to map keys to our custom lua functions
 function M.key_mapper(mode, key, result)
   vim.api.nvim_set_keymap(
     mode,
