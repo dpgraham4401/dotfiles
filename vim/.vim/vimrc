@@ -1,62 +1,72 @@
-﻿" Vim init 2.0
+" Vim configuration file
+"
 " Plugins
 call plug#begin()
+	" toggle comment regardless of file type
 	Plug 'tpope/vim-commentary'
+	" surround text objects with quotes, parens, tags, etc
 	Plug 'tpope/vim-surround'
+	" sensible defaults
+	Plug 'tpope/vim-sensible'
+	" Auto add closing brackets
 	Plug 'tmsvg/pear-tree'
+	" NERDTree file explorer
 	Plug 'preservim/nerdtree'
-	Plug 'easymotion/vim-easymotion'
+	" status bar
+	Plug 'vim-airline/vim-airline'
+	" colorschemes
+	Plug 'rafi/awesome-vim-colorschemes'
+	" icons for nvim
+	Plug 'kyazdani42/nvim-web-devicons'
+	Plug 'akinsho/bufferline.nvim'
+	Plug 'junegunn/fzf'
+	Plug 'junegunn/fzf.vim' 
+	" Plug 'lewis6991/spellsitter.nvim'
+	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+	Plug 'akinsho/toggleterm.nvim'
+	Plug 'github/copilot.vim'
 call plug#end()
 
+" Settings 
+" See vim-sensible which sets many of these defaults
+" use :help '<setting>' to get more info
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
-set autoindent
-let mapleader=" "
 set nowrap
 set relativenumber
 set number
 set mouse=a
-set clipboard+=unnamedplus
+set clipboard=unnamed
 set belloff=all
 set hidden
-set termguicolors
-set incsearch
-syntax enable
-filetype plugin indent on
-colorscheme habamax
+set rtp+=/opt/homebrew/opt/fz
+set scrolloff=5
 
-" Keybindings
+" leader key
+let mapleader=" "
+
+" colorscheme
+colorscheme termschool
+
+" Buffer navigation mappings
 inoremap jk <Esc>
-nnoremap ; :
-" navigate buffers
 noremap <S-j> :bnext<CR>
 noremap <S-k> :bprevious<CR>
-noremap <Tab> :bprevious<CR>
-" open ranger file explorer
-map <leader>n :NERDTreeToggle<CR> 
-" save with Control-S
+
+" save and quit
 map <C-s> :w<CR>
-" map <leader>s :w<CR>
-" quit with Control-q
+" we override this in neovim with a custom fn, in vim this will close out all
+" buffers
 map <C-q> :q<CR>
 map <leader>q :q<CR>
+map <leader>s :w<CR>
+nnoremap ; :
 
-" easy motion
-" <Leader>f{char} to move to {char}
-map  <Leader>f <Plug>(easymotion-bd-f)
-nmap <Leader>f <Plug>(easymotion-overwin-f)
-
-" s{char}{char} to move to {char}{char}
-nmap s <Plug>(easymotion-overwin-f2)
-
-" Move to line
-map <Leader>L <Plug>(easymotion-bd-jk)
-nmap <Leader>L <Plug>(easymotion-overwin-line)
-
-" Move to word
-map  <Leader>w <Plug>(easymotion-bd-w)
-nmap <Leader>w <Plug>(easymotion-overwin-w)
+" Plugin key mappings
+nnoremap <leader>n	:NERDTreeToggle<CR>
+nnoremap <leader>f	:Files<CR>
+nnoremap <Leader>' :ToggleTerm<CR>
 
 " move around splits with Alt-arrow
 nmap <silent> <A-Up> :wincmd k<CR>
@@ -68,3 +78,5 @@ nnoremap <leader>d dd
 " Autocomplete
 set completeopt=menu,menuone,noselect
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<Tab>"
+
+let g:copilot_workspace_folders = [ "~/Projects/haztrak", "~/Projects/vimpirate", "~/Projects/the-manifest-game", "~/Projects/e-manifest"]
