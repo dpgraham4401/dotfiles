@@ -18,6 +18,8 @@ call plug#begin()
 	Plug 'rafi/awesome-vim-colorschemes'
 	" icons for nvim
 	Plug 'kyazdani42/nvim-web-devicons'
+	" Vim HardTime
+	Plug 'takac/vim-hardtime'
 	" Fuzzy finder
 	Plug 'junegunn/fzf'
 	" Fuzzy finder for vim
@@ -51,6 +53,9 @@ set hidden
 set rtp+=/opt/homebrew/opt/fz
 set scrolloff=5
 " set spell
+
+" disable arrow keys, and repeating keys like kkkkk or jjjjjj
+let g:hardtime_default_on = 1
 
 " leader key
 let mapleader=" "
