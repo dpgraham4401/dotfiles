@@ -75,7 +75,6 @@ map <C-s> :w<CR>
 map <C-q> :q<CR>
 map <leader>q :q<CR>
 map <leader>s :w<CR>
-nnoremap ; :
 
 " Plugin key mappings
 nnoremap <leader>n	:NERDTreeToggle<CR>
