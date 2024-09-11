@@ -26,7 +26,7 @@
 ### Apperance
 
 	# Wallpaper
-		output * bg $HOME/.local/share/backgrounds/tree-house.jpg fill
+	output * bg $HOME/.local/share/backgrounds/tree-house.jpg fill
     focus_wrapping no
 
     # Window colors
@@ -34,6 +34,21 @@
     client.focused          #ffffff #ffffff #ffffff #0066ff     #ffffff
     client.unfocused        #4080bf #4080bf #4080bf #4080bf     #4080bf
     client.urgent           #33ccff #33ccff #33ccff #33ccff     #33ccff
+
+	# SwayFX
+	corner_radius 10
+	shadows enable
+	shadows_on_csd enable
+	shadow_blur_radius 20
+	shadow_color #0000007F
+	# inactive window fade amount. 0.0 = no dimming, 1.0 = fully dimmed
+	default_dim_inactive 0.0
+	dim_inactive_colors.unfocused #000000FF
+	dim_inactive_colors.urgent #900000FF
+
+	# Third-party SwayFx effects
+	layer_effects "gtk-layer-shell" blur enable; shadows enable; corner_radius 13
+	layer_effects "wofi" blur enable; shadows enable; corner_radius 13
 
 	# Gaps
 	gaps inner 10
@@ -96,7 +111,7 @@ exec swayidle -w \
 ### Applications shortcuts 
 	# Launcher
 	# bindsym $mod+space exec --no-startup-id wofi --show drun -I -i
-	bindsym $mod+space exec "rofi -show drun"
+	bindsym $mod+space exec "wofi"
 
 	# 1password Quick Access
 	bindsym $mod+Shift+p exec 1password --quick-access

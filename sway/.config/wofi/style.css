@@ -1,0 +1,82 @@
+@define-color base10 #2E3440;
+@define-color base00 #3B4252;
+@define-color base02 #434C5E;
+@define-color base03 #4C566A;
+@define-color base04 #D8DEE9;
+@define-color base05 #E5E9F0;
+@define-color base06 #ECEFF4;
+@define-color base07 #8FBCBB;
+@define-color base08 #88C0D0;
+@define-color base09 #81A1C1;
+@define-color base0A #5E81AC;
+@define-color base0B #BF616A;
+@define-color base0C #D08770;
+@define-color base0D #EBCB8B;
+@define-color base0E #A3BE8C;
+@define-color base0F #B48EAD;
+@define-color base0G #2D353B;
+@define-color base0H #1E2327;
+@define-color base0I #8B8576;
+
+@define-color bg-light #334044;
+
+#entry {
+   border-radius: 5px;
+   padding: 5px;
+   margin: 0px 4px 0px 4px;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+#entry:selected {
+   /*color: @base0D;*/
+   background-color: alpha(@base0H, 0.6);
+   padding: 5px;
+   color: @base0H;
+}
+
+#text:selected {
+   color: white;
+}
+
+#window {
+   animation-name: fadeIn;
+   animation-duration: 0.4s;
+   background-color: alpha(@theme_bg_color, 0.6);
+   font-family: Hack;
+/* font-size:14; */
+}
+
+#input {
+   border: none;
+   background-color: alpha(@base0H, 0.6);
+   border-radius: 10px;
+   margin: 5px 5px 5px 5px;
+   padding: 8px;
+}
+
+#inner-box {
+   border-radius: 10px;
+   margin: 5px;
+   padding-top: 5px;
+/* margin-right: 180px; */
+}
+
+#outer-box {
+   border-radius: 10px;
+   /*border: 5px solid @base0G;*/
+   padding: 5px;
+}
+
+#scroll {
+}
+
+#text {
+   color: @base04;
+}
+
+#img {
+}
