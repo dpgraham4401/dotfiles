@@ -49,6 +49,7 @@
 	# Third-party SwayFx effects
 	layer_effects "gtk-layer-shell" blur enable; shadows enable; corner_radius 13
 	layer_effects "wofi" blur enable; shadows enable; corner_radius 13
+	layer_effects "wlogout" blur enable; shadows enable; corner_radius 13
 
 	# Gaps
 	gaps inner 10
@@ -106,7 +107,7 @@ exec swayidle -w \
     bindsym $mod+Shift+r reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'Do you really want to exit sway?' -b 'Yes, exit sway' 'swaymsg exit' --background=#005566 --button-background=#009999 --button-border=#002b33 --border-bottom=#002b33 --button-margin-right=10px
+    bindsym $mod+Shift+e exec wlogout
 
 ### Applications shortcuts 
 	# Launcher
