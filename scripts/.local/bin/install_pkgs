@@ -60,6 +60,7 @@ install_from_pkg_file(){
 			then
 				echo "dnf found"
 				# dnf --version
+				sudo dnf copr enable swayfx/swayfx
 				sudo dnf install $(cat $pkg_file)
 				exit
 			elif command -v yum &> /dev/null

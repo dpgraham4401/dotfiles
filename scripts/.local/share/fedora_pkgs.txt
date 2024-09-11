@@ -19,7 +19,7 @@ fedora-workstation-repositories
 python3
 golang
 nodejs
-sway
+swayfx
 wayland-devel
 swayidle
 swaylock
