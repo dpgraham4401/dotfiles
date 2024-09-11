@@ -1,6 +1,14 @@
-default-timeout=2000
+default-timeout=3000
 
 font=Roboto 11
 background-color=#002b33
 border-color=#005566
 border-radius=10
+height=800
+margin=4,4,20
+padding=15
+border-size=2
+group-by=summary
+
+[grouped]
+format=<b>%s</b>\n%b
