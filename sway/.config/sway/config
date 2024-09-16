@@ -48,7 +48,7 @@
 
 	# Third-party SwayFx effects
 	layer_effects "gtk-layer-shell" blur enable; shadows enable; corner_radius 13
-	layer_effects "wofi" blur enable; shadows enable; corner_radius 13
+	# layer_effects "fuzzel" blur enable; shadows enable; corner_radius 13
 	layer_effects "wlogout" blur enable; shadows enable; corner_radius 13
 
 	# Gaps
@@ -112,7 +112,7 @@ exec swayidle -w \
 ### Applications shortcuts 
 	# Launcher
 	# bindsym $mod+space exec --no-startup-id wofi --show drun -I -i
-	bindsym $mod+space exec "wofi"
+	bindsym $mod+space exec "fuzzel"
 
 	# 1password Quick Access
 	bindsym $mod+Shift+p exec 1password --quick-access

@@ -53,6 +53,7 @@ plugins=(
 	rust
 	gcloud
 	terraform
+	1password
 )
 source $ZSH/oh-my-zsh.sh
 source ~/.alias
