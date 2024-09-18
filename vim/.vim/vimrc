@@ -9,7 +9,8 @@ call plug#begin()
 	" sensible defaults
 	Plug 'tpope/vim-sensible'
 	" Auto add closing brackets
-	Plug 'tmsvg/pear-tree'
+	Plug 'jiangmiao/auto-pairs'
+	" Plug 'Raimondi/delimitMate'
 	" NERDTree file explorer
 	Plug 'preservim/nerdtree'
 	" status bar
@@ -25,7 +26,7 @@ call plug#begin()
 	" Fuzzy finder for vim
 	Plug 'junegunn/fzf.vim' 
 	" GitHUb Copilot - autocompletions on crack
-	Plug 'github/copilot.vim'
+	" Plug 'github/copilot.vim'
 	" Neovim specific plugins
 	if has('nvim')
 		" Add a bufferline to the top of the editor
