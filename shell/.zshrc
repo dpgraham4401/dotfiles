@@ -61,3 +61,6 @@ export GPG_TTY=$(tty)
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/bin/terraform terraform
+
+# Created by `pyprojectx` on 2024-09-24 21:29:24
+export PATH="$PATH:/home/dg/.pyprojectx"

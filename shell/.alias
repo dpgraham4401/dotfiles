@@ -78,3 +78,10 @@ if command -v op &> /dev/null
 then
 	source <(op completion zsh)
 fi
+
+
+# ruff CLI auto-completion
+if command -v ruff &> /dev/null
+then
+	source <(ruff generate-shell-completion zsh)
+fi

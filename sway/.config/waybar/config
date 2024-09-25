@@ -1,7 +1,6 @@
 {
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["clock", "idle_inhibitor"],
-    /* "modules-right": ["tray", "custom/scratchpad-indicator", "pulseaudio", "custom/power"], */
     "modules-right": ["tray", "custom/scratchpad-indicator", "pulseaudio", "custom/power"],
 
     "sway/mode": {
@@ -20,7 +19,6 @@
             "activated": "",
             "deactivated": ""
         },
-		"on-click": "bash /home/dg/.local/bin/toggleRemote"
     },
     "tray": {
         "icon-size": 15,

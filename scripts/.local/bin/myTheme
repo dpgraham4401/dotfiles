@@ -1,0 +1,39 @@
+#!/bin/bash
+
+# Function to display usage
+usage() {
+	echo "$(basename "$0") [-l|--light]"
+	echo "  -l, --light		Light theme"
+	echo "  -h, --help		Display help"
+	echo "  No argument		Dark theme"
+    exit 1
+}
+
+# # Parse CLI argument
+while [[ $# -gt 0 ]]; do
+  case $1 in
+    -l|--light)
+		echo "light"
+		gsettings set org.gnome.desktop.interface gtk-theme "Yaru-blue"
+		gsettings set org.gnome.desktop.interface icon-theme "Yaru-blue"
+		gsettings set org.gnome.desktop.interface cursor-theme "Yaru"
+		gsettings set org.gnome.shell.extensions.user-theme name "Yaru-blue"
+		shift
+		exit 0
+		;;
+	-d|--dark)
+		echo "dark"
+		gsettings set org.gnome.desktop.interface gtk-theme "Yaru-dark-blue"
+		gsettings set org.gnome.desktop.interface icon-theme "Yaru-dark-blue"
+		gsettings set org.gnome.desktop.interface cursor-theme "Yaru"
+		gsettings set org.gnome.shell.extensions.user-theme name "Yaru-dark-blue"
+		exit 0
+      ;;
+	-h|--help)
+		usage
+		;;
+	*)
+		usage
+		;;
+  esac
+done
