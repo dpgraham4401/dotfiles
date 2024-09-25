@@ -1,44 +1,88 @@
-﻿" Vim init 2.0
+" Vim configuration file
+"
 " Plugins
 call plug#begin()
+	" toggle comment regardless of file type
 	Plug 'tpope/vim-commentary'
+	" surround text objects with quotes, parens, tags, etc
 	Plug 'tpope/vim-surround'
-	Plug 'tmsvg/pear-tree'
+	" sensible defaults
+	Plug 'tpope/vim-sensible'
+	" Auto add closing brackets
+	Plug 'jiangmiao/auto-pairs'
+	" Plug 'Raimondi/delimitMate'
+	" NERDTree file explorer
 	Plug 'preservim/nerdtree'
+	" status bar
+	Plug 'vim-airline/vim-airline'
+	" colorschemes
+	Plug 'rafi/awesome-vim-colorschemes'
+	" icons for nvim
+	Plug 'kyazdani42/nvim-web-devicons'
+	" Vim HardTime
+	Plug 'takac/vim-hardtime'
+	" Fuzzy finder
+	Plug 'junegunn/fzf'
+	" Fuzzy finder for vim
+	Plug 'junegunn/fzf.vim' 
+	" GitHUb Copilot - autocompletions on crack
+	Plug 'github/copilot.vim'
+	" Neovim specific plugins
+	if has('nvim')
+		" Add a bufferline to the top of the editor
+		Plug 'akinsho/bufferline.nvim'
+		" Treesitter -- I always forget what the heck this does
+		Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+		" Open up a terminal without leaving vim
+		Plug 'akinsho/toggleterm.nvim'
+	endif
 call plug#end()
 
+" Settings 
+" See vim-sensible which sets many of these defaults
+" use :help '<setting>' to get more info
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
-set autoindent
-let mapleader=" "
 set nowrap
 set relativenumber
 set number
 set mouse=a
-set clipboard+=unnamedplus
+set clipboard=unnamedplus
 set belloff=all
 set hidden
-set termguicolors
-set incsearch
-syntax enable
-filetype plugin indent on
+set rtp+=/opt/homebrew/opt/fz
+set scrolloff=5
+" set spell
 
-" Keybindings
+" disable arrow keys, and repeating keys like kkkkk or jjjjjj
+let g:hardtime_default_on = 1
+
+" leader key
+let mapleader=" "
+
+" colorscheme
+colorscheme termschool
+
+" Buffer navigation mappings
 inoremap jk <Esc>
-nnoremap ; :
-" navigate buffers
 noremap <S-j> :bnext<CR>
 noremap <S-k> :bprevious<CR>
-noremap <Tab> :bprevious<CR>
-" open ranger file explorer
-map <leader>n :NERDTreeToggle<CR> 
-" save with Control-S
+
+" save and quit
 map <C-s> :w<CR>
-map <leader>s :w<CR>
-" quit with Control-q
+" we override this in neovim with a custom fn, in vim this will close out all
+" buffers
 map <C-q> :q<CR>
 map <leader>q :q<CR>
+map <leader>s :w<CR>
+
+" Plugin key mappings
+nnoremap <leader>n	:NERDTreeToggle<CR>
+nnoremap <leader>f	:Files<CR>
+if has('nvim')
+	nnoremap <Leader>' :ToggleTerm<CR>
+endif
 
 " move around splits with Alt-arrow
 nmap <silent> <A-Up> :wincmd k<CR>
@@ -50,3 +94,5 @@ nnoremap <leader>d dd
 " Autocomplete
 set completeopt=menu,menuone,noselect
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<Tab>"
+
+let g:copilot_workspace_folders = [ "~/Projects/haztrak", "~/Projects/vimpirate", "~/Projects/the-manifest-game", "~/Projects/e-manifest"]

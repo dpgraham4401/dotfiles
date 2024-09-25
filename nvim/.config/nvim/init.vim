@@ -13,10 +13,10 @@ call plug#begin()
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 	Plug 'junegunn/fzf.vim'
 	Plug 'lewis6991/spellsitter.nvim'
-	" Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 	Plug 'akinsho/toggleterm.nvim'
-	" Plug 'williamboman/mason.nvim'
-	" Plug 'williamboman/mason-lspconfig.nvim'
+	Plug 'williamboman/mason.nvim'
+	Plug 'williamboman/mason-lspconfig.nvim'
 	Plug 'neovim/nvim-lspconfig'
 	Plug 'hrsh7th/cmp-nvim-lsp'
 	Plug 'hrsh7th/cmp-buffer'
@@ -79,10 +79,10 @@ require('utils')
 require("terminal").setup()
 require("spellsitter").setup()
 require("bufferline").setup()
--- require("mason").setup()
--- require("mason-lspconfig").setup({
---     ensure_installed = { "tsserver", "gopls", "terraformls" }
--- })
+require("mason").setup()
+require("mason-lspconfig").setup({
+    ensure_installed = { "tsserver", "gopls", "terraformls" }
+})
 require("term_options")
 require("cmp_config")
 require("lsp-config")
