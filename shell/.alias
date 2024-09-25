@@ -67,3 +67,16 @@ export GPG_TTY=$(tty)
 export NVM_DIR="$HOME/.config//nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# TMUX
+if [[ "$TERMINAL_EMULATOR" =~ [Jj][Ee][Tt][Bb][Rr][Aa][Ii][Nn][Ss] ]]; then
+	:
+elif [[ -z "$TMUX" ]]; then 
+	exec tmux
+fi
+
+# 1password CLI auto-completion
+if command -v op &> /dev/null
+then
+	source <(op completion zsh)
+fi

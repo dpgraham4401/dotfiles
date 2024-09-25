@@ -99,7 +99,7 @@ exec swayidle -w \
 ### Applications shortcuts 
 	# Launcher
 	# bindsym $mod+space exec --no-startup-id wofi --show drun -I -i
-	bindsym $mod+space exec "rofi -show drun"
+	bindsym $mod+space exec "fuzzel"
 
 	# 1password Quick Access
 	bindsym $mod+Shift+p exec 1password --quick-access
