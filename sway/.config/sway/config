@@ -38,7 +38,6 @@
     client.focused          #ffffff #ffffff #ffffff #0066ff     #ffffff
     client.unfocused        $color1 $color1 $color1 $color1     $color1
     client.urgent           $color2 $color2 $color2 $color2		$color2
- 
 	# Gaps
 	gaps inner 10
 	gaps outer 4
@@ -95,7 +94,7 @@ exec swayidle -w \
     bindsym $mod+Shift+r reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'Do you really want to exit sway?' -b 'Yes, exit sway' 'swaymsg exit' --background=#005566 --button-background=#009999 --button-border=#002b33 --border-bottom=#002b33 --button-margin-right=10px
+    bindsym $mod+Shift+e exec wlogout
 
 ### Applications shortcuts 
 	# Launcher
