@@ -1,9 +1,10 @@
 [user]
 	email = dpgraham4401@gmail.com
 	name = David Graham
-	signingkey = CFFD143C86072C8F
+	signingkey = /home/dg/.ssh/id_ed25519.pub
 [gpg]
 	program = gpg
+	format = ssh
 [init]
 	defaultBranch = main
 [commit]
