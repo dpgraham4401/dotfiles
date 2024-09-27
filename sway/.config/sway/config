@@ -30,7 +30,7 @@
 ### Apperance
 
 	# Wallpaper
-		output * bg /usr/share/backgrounds/jj_light_by_Hiking93.jpg fill
+		output * bg /home/dg/.local/share/backgrounds/purple_sand.png fill
     focus_wrapping no
 
     # Window colors
@@ -241,3 +241,9 @@ input type:keyboard {
 # Browser picture-in-picture mode
 for_window [app_id="firefox" title="^Picture-in-Picture$"] \
     floating enable, move position 1400 700, resize set width 20 ppt height 22 ppt, sticky enable
+
+# Prevent long GTK application start times
+# https://llandy3d.github.io/sway-on-ubuntu/extra/#gtk-applications-have-long-startup
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec hash dbus-update-activation-environment 2>/dev/null && \
+     dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
