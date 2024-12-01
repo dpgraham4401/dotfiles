@@ -1,5 +1,5 @@
 # .zshrc
-# if [ "$TMUX" = "" ]; then tmux; fi
+if [ "$TMUX" = "" ]; then tmux; fi
 autoload -U colors && colors
 fpath+=~/.zfunc
 HISTFILE=~/.histfile
@@ -67,3 +67,27 @@ if [ -f "$HOME/.alias" ]; then
 fi
 
 eval "$(op completion zsh)"; compdef _op op
+
+# Created by `pyprojectx` on 2024-09-27 19:26:39
+export PATH="$PATH:/Users/dg/.pyprojectx"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/dg/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/dg/miniforge3/etc/profile.d/conda.sh" ]; then
+        . "/Users/dg/miniforge3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/dg/miniforge3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+
+if [ -f "/Users/dg/miniforge3/etc/profile.d/mamba.sh" ]; then
+    . "/Users/dg/miniforge3/etc/profile.d/mamba.sh"
+fi
+# <<< conda initialize <<<
+
+export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
