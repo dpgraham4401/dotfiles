@@ -39,9 +39,9 @@ CASE_SENSITIVE="false"
 
 plugins=(
     golang 
-	dnf
+    dnf
     kubectl
-	minikube
+    minikube
     docker
     git
     web-search
@@ -49,11 +49,13 @@ plugins=(
     dirhistory
     history
     pip
-	helm
-	rust
-	gcloud
-	terraform
-	1password
+    helm
+    rust
+    gcloud
+    terraform
+    1password
+    conda
+    conda-env
 )
 source $ZSH/oh-my-zsh.sh
 source ~/.alias
@@ -64,3 +66,23 @@ complete -o nospace -C /usr/bin/terraform terraform
 
 # Created by `pyprojectx` on 2024-09-24 21:29:24
 export PATH="$PATH:/home/dg/.pyprojectx"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/dg/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/dg/miniforge3/etc/profile.d/conda.sh" ]; then
+        . "/home/dg/miniforge3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/dg/miniforge3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+
+if [ -f "/home/dg/miniforge3/etc/profile.d/mamba.sh" ]; then
+    . "/home/dg/miniforge3/etc/profile.d/mamba.sh"
+fi
+# <<< conda initialize <<<
+

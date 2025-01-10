@@ -1,6 +1,5 @@
 "" Source your .vimrc
 source ~/.vim/vimrc
-
 " putting this here until source works again
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-surround'
