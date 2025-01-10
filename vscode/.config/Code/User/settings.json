@@ -1,0 +1,164 @@
+{
+  "window.titleBarStyle": "custom",
+  "window.zoomPerWindow": false,
+  "git.enableSmartCommit": true,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "explorer.confirmDelete": false,
+  "workbench.startupEditor": "none",
+  // workbench
+  "workbench.preferredDarkColorTheme": "JetBrains Darcula Theme",
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#6b3232",
+    "statusBar.noFolderBackground": "#6b3232",
+    "statusBar.debuggingBackground": "#6b3232",
+    "statusBar.foreground": "#fff",
+    "statusBar.debuggingForeground": "#fff"
+  },
+  "workbench.colorTheme": "JetBrains Darcula Theme",
+  // files
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/.idea": true,
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    ".vscode": true,
+    "**/*.pyc": true
+  },
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+  // terminal
+  "terminal.integrated.env.osx": {
+    "TMUX": "no"
+  },
+  "terminal.integrated.env.linux": {
+    "TMUX": "no"
+  },
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.lineHeight": 1.2,
+  // editor
+  "editor.minimap.enabled": false,
+  "editor.lineNumbers": "relative",
+  "editor.rulers": [100],
+  "editor.fontLigatures": true,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.addMissingImports": "always",
+    "source.fixAll": "always"
+  },
+  // Python
+  "[python]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.ruff": "explicit",
+      "source.organizeImports.ruff": "explicit"
+    }
+  },
+  // TypeScript/JavaScript
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "always"
+    }
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/*.code-search": true,
+    ".venv": true,
+    ".git": true,
+    ".vscode": true,
+    ".coverage": true,
+    ".pytest_cache": true,
+    ".ruff_cache": true
+  },
+  // html
+  "html.format.indentInnerHtml": true,
+  // vim
+  "vim.vimrc.enable": true,
+  "vim.vimrc.path": "$HOME/.vim/vimrc",
+  "vim.enableNeovim": false,
+  "vim.neovimUseConfigFile": false,
+  "vim.cursorStylePerMode.insert": "line",
+  "vim.cursorStylePerMode.normal": "block",
+  "vim.cursorStylePerMode.replace": "block-outline",
+  "vim.leader": "<space>",
+  "vim.handleKeys": {
+    "<C-d>": true,
+    "<C-s>": true,
+    "<C-z>": false,
+    "<C-n>": false, // Handled by the NerdTree plugin
+    "<C-p>": false
+  },
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "k"],
+      "after": ["<esc>"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<S-k>"],
+      "commands": [":bnext"]
+    },
+    {
+      "before": ["<S-j>"],
+      "commands": [":bprevious"]
+    },
+    {
+      "before": ["<C-s>"],
+      "commands": ["workbench.action.file.save"]
+    },
+    {
+      "before": ["leader", "w"],
+      "commands": ["workbench.action.files.save"]
+    },
+    {
+      "before": ["<C-q>"],
+      "commands": [":q"]
+    },
+    {
+      "before": ["<C-Up>"],
+      "commands": [":wincmd k"]
+    },
+    {
+      "before": ["<C-Left>"],
+      "commands": [":wincmd h"]
+    }
+  ],
+  "vim.statusBarColorControl": true,
+  "vim.statusBarColors.normal": ["#363838", "#fff"],
+  "vim.statusBarColors.insert": ["#6b3232", "#fff"],
+  "vim.statusBarColors.visual": ["#007ACC", "#fff"],
+  "vim.statusBarColors.visualline": ["#195e08", "#fff"],
+  "vim.statusBarColors.visualblock": ["#195e08", "#fff"],
+  "vim.statusBarColors.replace": ["#7f3d0a", "#fff"],
+  "vim.statusBarColors.commandlineinprogress": "#007ACC",
+  "vim.statusBarColors.searchinprogressmode": "#214343",
+  "vim.statusBarColors.easymotionmode": "#007ACC",
+  "vim.statusBarColors.easymotioninputmode": "#007ACC",
+  "vim.statusBarColors.surroundinputmode": "#007ACC",
+  // General/Misc
+  "telemetry.telemetryLevel": "off",
+  "redhat.telemetry.enabled": false,
+  "remoteHub.commitDirectlyWarning": "off",
+  "go.toolsManagement.autoUpdate": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "workbench.iconTheme": "material-icon-theme",
+  "git.autofetch": true,
+  "mypy-type-checker.path": [
+    "C:\\Users\\DGRAHA01\\AppData\\Local\\miniforge3\\envs\\hero\\Scripts\\mypy.exe"
+  ],
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
+  "githubLocalActions.dockerDesktopPath": "/Applications/Docker.app",
+  "editor.fontFamily": "Source Code Pro, Consolas, 'Courier New', monospace"
+}
